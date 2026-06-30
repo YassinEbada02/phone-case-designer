@@ -1,3 +1,4 @@
+alert("Script Loaded");
 const canvas = new fabric.Canvas('case_designer_canvas', {
     preserveObjectStacking: true,
 });
