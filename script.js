@@ -1,7 +1,10 @@
 alert("Script Loaded");
+
 const canvas = new fabric.Canvas('case_designer_canvas', {
     preserveObjectStacking: true,
 });
+
+alert("Canvas Created");
 
 fabric.Image.fromURL(
     "assets/mockups/iphone14pro.png",
