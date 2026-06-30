@@ -154,6 +154,8 @@ document
 .getElementById("case_designer_clear_btn")
 .onclick=function(){
 
-    canvas.clear();
+    canvas.getObjects().forEach(obj => canvas.remove(obj));
+    canvas.discardActiveObject();
+    canvas.renderAll();
 
 };
