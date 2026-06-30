@@ -2,6 +2,31 @@ const canvas = new fabric.Canvas('case_designer_canvas', {
     preserveObjectStacking: true,
 });
 
+fabric.Image.fromURL(
+    "assets/mockups/iphone14pro.png",
+    function (img) {
+
+        img.selectable = false;
+        img.evented = false;
+
+        img.scaleToWidth(canvas.width);
+
+        img.set({
+            left: 0,
+            top: 0
+        });
+
+        canvas.setOverlayImage(
+            img,
+            canvas.renderAll.bind(canvas)
+        );
+
+    },
+    {
+        crossOrigin: "anonymous"
+    }
+);
+
 // رفع صورة
 document
 .getElementById("case_designer_image_input")
